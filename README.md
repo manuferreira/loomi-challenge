@@ -1,1 +1,1 @@
-# loomi-challenge
+# Loomi challenge
