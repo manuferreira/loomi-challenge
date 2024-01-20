@@ -9,9 +9,9 @@
   5. Install Selenium package for Python: go to https://pypi.org/project/selenium/
      In this case, you will have to execute the following command on powershell: <code>pip install selenium</code> remember to add python to your environment variable PATH
 
-- How the folders are organized?
+- <b>How the folders are organized?</b>
 
-- How to run a test?
+- <b>How to run a test?</b>
 
 
 
