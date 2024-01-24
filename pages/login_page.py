@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from config.Config import Config
+from Config import Config
 from base_page import BasePage
-from resources.locators import Profile
+from locators import Profile
 
 
 class Login(BasePage):

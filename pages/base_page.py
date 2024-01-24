@@ -1,5 +1,5 @@
-from config.Config import Config
-from resources.locators import NavigationLocators
+from Config import Config
+from locators import NavigationLocators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 

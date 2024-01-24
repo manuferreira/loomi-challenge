@@ -1,9 +1,10 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from resources.locators import NavigationLocators, General, FavoriteTeamSearch
-from pages.base_page import BasePage
-from config.Config import Config
+from locators import NavigationLocators, General, FavoriteTeamSearch
+from base_page import BasePage
+from Config import Config
+from time import sleep
 
 class FavoritesPage(BasePage):
     def __init__(self, webdriver):

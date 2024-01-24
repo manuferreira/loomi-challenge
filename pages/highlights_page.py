@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from resources.locators import NavigationLocators, General, Highlights
-from config.Config import Config
-from pages.base_page import BasePage
+from locators import NavigationLocators, General, Highlights
+from Config import Config
+from base_page import BasePage
 from time import sleep
 
 class HighlightsPage(BasePage):

@@ -1,7 +1,7 @@
 import unittest
 from selenium.webdriver import Chrome
-from config.Config import Config
-from pages.login_page import Login
+from Config import Config
+from login_page import Login
 
 class TestLogin(unittest.TestCase):
 

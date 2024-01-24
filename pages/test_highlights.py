@@ -1,8 +1,8 @@
 import unittest
 from selenium.webdriver import Chrome
-from config.Config import Config
-from pages.login_page import Login
-from pages.highlights_page import HighlightsPage
+from Config import Config
+from login_page import Login
+from highlights_page import HighlightsPage
 
 
 class TestHighlights(unittest.TestCase):

@@ -1,8 +1,8 @@
 import unittest
 from selenium.webdriver import Chrome
-from pages.login_page import Login
-from config.Config import Config
-from pages.favorites_page import FavoritesPage
+from login_page import Login
+from Config import Config
+from favorites_page import FavoritesPage
 
 class TestFavorites(unittest.TestCase):
     def setUp(self):
@@ -25,13 +25,13 @@ class TestFavorites(unittest.TestCase):
         self.favorites_page.select_favorite_team(team_name=self.favorite_team_name[1])
 
     def test_check_favorite_team(self):
-        self.login_page.go_to_favorites()
-        self.favorites_page.select_favorite_team(team_name=self.favorite_team_name[0])
-        self.favorites_page.select_favorite_team(team_name=self.favorite_team_name[1])
+         self.login_page.go_to_favorites()
+         self.favorites_page.select_favorite_team(team_name=self.favorite_team_name[0])
+         self.favorites_page.select_favorite_team(team_name=self.favorite_team_name[1])
 
-        favorite_team = self.favorites_page.get_favorite_team()
-        for team in favorite_team:
-            self.assertEqual(self.favorite_team_name, team, "Different results")
+         favorite_team = self.favorites_page.get_favorite_team()
+         for team in favorite_team:
+             self.assertEqual(self.favorite_team_name, team, "Different results")
 
 
 if __name__ == '__main__':
