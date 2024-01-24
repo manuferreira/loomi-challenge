@@ -34,7 +34,7 @@ class FavoritesPage(BasePage):
         self.webdriver.find_element(*self.favorite_team_input).send_keys(team_name)
 
         team_name_xpath = self.favorite_team_name[1].format(text=team_name)
-        WebDriverWait(self.webdriver, 5).until(EC.visibility_of_element_located((self.favorite_team_name[0], team_name_xpath)))
+        WebDriverWait(self.webdriver, 8).until(EC.visibility_of_element_located((self.favorite_team_name[0], team_name_xpath)))
 
         add_team_button_xpath = self.add_team_button[1].format(team=team_name)
         self.webdriver.find_element(self.add_team_button[0], add_team_button_xpath).click()
@@ -53,12 +53,15 @@ class FavoritesPage(BasePage):
     def remove_teams(self):
         WebDriverWait(self.webdriver, Config.ELEMENT_PAGE_MAX).until(EC.visibility_of_element_located(self.edit_teams))
         self.webdriver.find_element(*self.edit_teams).click()
+
+        WebDriverWait(self.webdriver, 5).until(EC.visibility_of_all_elements_located(self.remove_team_button))
         remove_teams = self.webdriver.find_elements(*self.remove_team_button)
 
         for delete_team in remove_teams:
             delete_team.click()
 
-        self.webdriver.find_element(*self.save_teams).click()
+        WebDriverWait(self.webdriver, 5).until(EC.element_to_be_clickable(self.save_teams)).click()
+
 
     def assert_favorite_matches(self, teams):
         for element in teams:
