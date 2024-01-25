@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.locators import NavigationLocators, General, Highlights
 from Config import Config
-from pages.base_page import BasePage
+from base_page import BasePage
 
 class MatchesPage(BasePage):
     # missing implementation
