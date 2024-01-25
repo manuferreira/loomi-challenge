@@ -10,8 +10,12 @@
      In this case, you will have to execute the following command on powershell: <code>pip install selenium</code> remember to add python to your environment variable PATH
 
 - <b>How the folders are organized?</b>
+  - pages: I had to put the files inside this one page because of some import errors, this will be fixed later on and the files will be put in their respective folders.
+  - resources
+  - config
 
 - <b>How to run a test?</b>
+  - The tests are located inside the files that starts with <b>test_</b> example: <b>test_login.py</b> you have to run the __main__ method inside these files and all the tests related to that file will be run.
 
 
 
